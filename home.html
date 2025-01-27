@@ -1,0 +1,420 @@
+ <!DOCTYPE html>
+      <html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Take 5 for Your Mental Health</title>
+         <style>
+		 /* General Reset */
+<style>
+    body {
+        font-family: 'Georgia', serif;
+        background-color: #f7f0f0;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navigation {
+        background-color: #d69e9a;
+        padding: 15px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .navigation ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .navigation li {
+        margin: 0 15px;
+    }
+
+    .navigation a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .navigation a:hover {
+        text-decoration: underline;
+    }
+
+    main {
+        padding-top: 100px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .content-container {
+        max-width: 800px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        line-height: 1.6;
+    }
+
+    h1 {
+        color: #d69e9a;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    p {
+        color: #7d6664;
+        margin-bottom: 15px;
+    }
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+
+    .key-points {
+        margin-top: 20px;
+        padding: 15px;
+        background-color: #f7e4e4;
+        border-radius: 8px;
+    }
+
+
+    .key-points h2 {
+        color: #d69e9a;
+        margin-bottom: 10px;
+    }
+
+    .key-points ul {
+        padding-left: 20px;
+    }
+
+    .key-points li {
+        margin-bottom: 10px;
+    }
+
+    .key-points li:last-child {
+        margin-bottom: 0;
+    }
+</style>
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background-color: #f7f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-container {
+  margin-top: 20px; /* Add extra spacing below the navigation bar */
+  perspective: 1000px;
+}
+
+.card {
+  width: 400px;
+  height: 250px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  cursor: pointer;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.card-front {
+  background-color: #FFBBE9;
+  color: #fff;
+}
+
+.card-back {
+  background-color: #fff;
+  color: #7d6664;
+  transform: rotateY(180deg);
+  padding: 20px;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: normal;
+}
+
+p {
+  font-size: 20px;
+  font-weight: normal;
+  color: #7d6664;
+  line-height: 1.8;
+  text-align: left;
+  padding: 10px;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f0f0;
+}
+
+.navigation {
+  background-color: #FFBBE9;
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation li {
+  margin: 0 15px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.navigation a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding-top: 120px; /* Adjusted to prevent overlap with navigation */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+
+.info-section {
+  width: 80%;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.info-section h2 {
+  color: #d69e9a;
+  margin-bottom: 15px;
+}
+
+.info-section p {
+  color: #7d6664;
+  line-height: 1.6;
+}
+
+/* Layout changes for text, image, heading, and video */
+/* Layout changes for text, image, heading, and video */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  width: 90%; /* Make the container wider */
+  margin: 0 auto;
+}
+
+.container .text {
+  flex: 1; /* Allow the text container to grow */
+  min-width: 50%; /* Ensure the text box is at least half the container width */
+  padding: 20px;
+  font-size: 20px;
+}
+
+.container .text p {
+  color: #7d6664;
+  line-height: 1.8;
+}
+
+.container img {
+  flex: 1; /* Image container shares remaining space equally */
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+}
+
+.heading-and-video {
+  margin-top: 20px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.heading-and-video h2 {
+  color: #d69e9a;
+  margin-bottom: 15px;
+}
+
+.heading-and-video video {
+  margin-top: 10px;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+</style>
+          
+      </head>
+      <body>
+          <nav class="navigation">
+              <ul>
+                  <li><a href="home.html">Home</a></li>
+                  <li><a href="index.html">Did You Know?</a></li>
+                  <li><a href="take5.html">Take 5 for your Mental Health</a></li>
+                  <li><a href="research.html">Background Research</a></li>
+                  <li><a href="information.html">More Information</a></li>
+                  
+              </ul>
+          </nav>
+
+          <main>
+              <div class="container">
+                  <div class="image">
+                        <img src="https://i.ibb.co/BGL5Tjs/BT.jpg" alt="BT" border="0" width=50% alt="Grace, Demi and Ms Ahearne at the BT Young Scientist 2025">
+                    </div>
+                  <div class="text">
+                      <h2>About Us</h2>
+                      <p>Hi! Our names are Grace Clarke and Demi Watson. We are TY students from Borrisokane Community College.</br> 
+                      We are passionate about social media usage in young children. Because of this, we created a website to spread awareness to children, parents, and teachers. 
+                      We participated in BT Young Scientist 2025 where we won a display award. After this, we decided to develop our project more by creating a website to show the effects of social media on young children. 
+                      We then entered Stem Stars 2025.</p>
+                  </div>
+				  
+
+                 
+          </main>
+    
+        <div class="container">
+            <div class="text">
+    <h2> Webwise Connected</h2>
+
+    <p> Based on real life experiences, Connected is a short film exploring how young people communicate and connect online. The film encourages young people to reflect on why their actions matter and the impact it can have on others.</br> We shape the internet everyday with our interactions. You can play a part in creating a better, connected online world.</p>
+            </div>
+            <div class="image">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/CpAg7RSx0ZU?si=KgqE32FIT22Hhdm1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+<div class ="text">
+    <h1> Useful Videos for Relaxation </h1>
+    <p>
+        We have compiled a list of videos that we find helpful for your mental health.</br>
+    These videos are all free to watch and are available on YouTube.
+    </p>
+    </div>
+
+<ul><li>
+    <div class="container">
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/syx3a1_LeFo?si=vk_hFgYSqra54Ked" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="text">
+            <h2> Letting Go (10 minutes)</h2>
+            <p>Tamara Levitt guides this 10 minute Daily Calm mindfulness meditation on letting go.
+
+        </p>
+        </div>
+    </div>
+
+    </div>
+</div></li>
+    <li>
+
+    <div class="container">
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Xl_B45DpMLU?si=x5NIK5mQuQ3x-BK5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="text">
+            <h2> Self Soothing (10 minutes)</h2>
+            <p>Tamara Levitt guides this 10 minute Daily Calm mindfulness meditation as a self soothing practice.</p> </div>
+    </div>
+
+    </div>
+    </div>
+</li>
+    <li>
+    <div class="container">
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZToicYcHIOU?si=7h24rtM0R75fF6FT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="text">
+            <h2> Be Present (10 minutes)</h2>
+            <p>Tamara Levitt guides this 10 minute Daily Calm mindfulness meditation to powerfully restore and re-connect with the present.</p> </div>
+    </div>
+
+    </div>
+    </div>
+</li><li>
+    <div class="container">
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ssss7V1_eyA?si=k2_i2ZBgJdNVnZvx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="text">
+            <h2> Mindfulness (5 minutes)</h2>
+            <p>For you to use when you are short on time, but still want to get into a mindful state of mind.  Even five minutes can produce major benefits, give it a try.</br> Enjoy!</p> </div>
+    </div>
+</li>
+    </div>
+    </div>
+
+    <div class="container">
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/yqeirBfn2j4?si=_vxb5xIWmmfdQyAx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="text">
+            <h2> Strech for Stress Relief (15 minutes)</h2>
+            <p>Welcome to this Yoga inspired Stretching Routine to relieve stress and anxiety. </p> </div>
+    </div>
+
+    </div>
+    </div>
+</ul>
+    </main>
+      </body>
+      </html>
+      

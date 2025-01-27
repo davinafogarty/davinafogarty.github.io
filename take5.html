@@ -1,0 +1,61 @@
+
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Take 5 for Your Mental Health</title>
+          <link rel="stylesheet" href="stylet5.css">
+      </head>
+      <body>
+          <nav class="navigation">
+              <ul>
+                  <li><a href="home.html">Home</a></li>
+                  <li><a href="dyk.html">Did You Know?</a></li>
+                  <li><a href="take5.html">Take 5 for your Mental Health</a></li>
+                  <li><a href="research.html">Background Research</a></li>
+                  <li><a href="information.html">More Information</a></li>
+                   
+              </ul>
+          </nav>
+      
+
+          <div class="card-container">
+              <div class="card" id="card">
+                  <div class="card-front">
+                      <h2>Take 5 for Your Mental Health</h2>
+                      <h3>Tap to reveal</h3>
+                  </div>
+                  <div class="card-back">
+                      <p id="activity"></p>
+                  </div>
+              </div>
+          </div>
+
+          <script>
+		  const activities = [
+  "<strong>Take a breath:</strong>Breathe deeply. Inhale for 4 seconds, hold for 4, exhale for 4. This can help reduce stress and improve focus.",
+  "<strong>Take a moment:</strong> Write down three things you're grateful today. This will help you focus on the positives and reduce stress.",
+  "<strong>Take a movement break:</strong> Spend five minutes doing some gentle stretches to relieve tension and help you to relax.",
+  "<strong>Take a look:</strong> Focus on the details around you (sounds, colors, smells) to ground yourself and calm the mind.",
+  "<strong>Take a walk:</strong> A brief walk outside can improve your mood, reduce stress, and boost your energy levels."
+];
+
+const card = document.getElementById("card");
+const activityText = document.getElementById("activity");
+
+card.addEventListener("click", () => {
+  // Flip the card
+  card.style.transform = card.style.transform === "rotateY(180deg)" ? "" : "rotateY(180deg)";
+
+  // Choose a random activity
+  const randomActivity = activities[Math.floor(Math.random() * activities.length)];
+  activityText.innerHTML = randomActivity;
+});
+</script>
+
+    
+          
+
+      </body>
+      </html>

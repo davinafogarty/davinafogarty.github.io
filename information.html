@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources for Everyone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Static Navigation Ribbon -->
+    <nav class="navigation">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="index.html">Did You Know?</a></li>
+            <li><a href="students.html">Students</a></li>
+            <li><a href="parents.html">Parents</a></li>
+            <li><a href="parents.html">Teachers</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Information Sections -->
+        <section id="students" class="info-section">
+            <h2>Information for Students</h2>
+            <p>Learn about strategies to manage stress, maintain positive mental health, and take a break from your screen.</p>
+            <button class="info-button" onclick="window.location.href='students.html'">More Information</button>
+        </section>
+
+        <section id="parents" class="info-section">
+            <h2>Information for Parents</h2>
+            <p>Discover how you can support your child's mental health, foster open communication, and create a positive environment at home.</p>
+            <button class="info-button" onclick="window.location.href='parents.html'">More Information</button>
+        </section>
+
+        <section id="teachers" class="info-section">
+            <h2>Information for Teachers</h2>
+            <p>Explore techniques for promoting mental wellness in the classroom and supporting students' emotional well-being.</p>
+            <button class="info-button" onclick="window.location.href='parents.html'">More Information</button>
+        </section>
+    </main>
+
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f0f0;
+        }
+
+        .navigation {
+            background-color: #2d656e;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navigation ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navigation li {
+            margin: 0 15px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .navigation a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding-top: 80px; /* To prevent content overlap with the navigation */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .info-section {
+            width: 80%;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .info-section h2 {
+            color: #2d656e;
+            margin-bottom: 15px;
+        }
+
+        .info-section p {
+            color: #2d656e;
+            line-height: 1.6;
+        }
+    </style>
+</body>
+</html>
